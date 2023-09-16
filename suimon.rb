@@ -5,20 +5,20 @@
 class Suimon < Formula
   desc ""
   homepage "https://github.com/bartosian/homebrew-tools"
-  version "1.0.1"
+  version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.0.1/suimon_Darwin_x86_64.tar.gz"
-      sha256 "6fdc4b4c6af89f08d97937a9ebaa619561e35de7519923ce1d10b308691f49c7"
+    if Hardware::CPU.arm?
+      url "https://github.com/bartosian/suimon/releases/download/v1.0.0/suimon_Darwin_arm64.tar.gz"
+      sha256 "dcbd34a25285f9f6dbe03e1a54eb80ebabfd6b305ae5049ca1c179acd050e1d8"
 
       def install
         bin.install "suimon"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bartosian/suimon/releases/download/v1.0.1/suimon_Darwin_arm64.tar.gz"
-      sha256 "83018f0aefce1965215ba40b1c4287f8fe1129ffca5c7f96e6a28745861f2322"
+    if Hardware::CPU.intel?
+      url "https://github.com/bartosian/suimon/releases/download/v1.0.0/suimon_Darwin_x86_64.tar.gz"
+      sha256 "2586966a040a13d202c5de3932d58db6df8cb80e75925b3ef431073908d0bc3f"
 
       def install
         bin.install "suimon"
@@ -28,16 +28,16 @@ class Suimon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bartosian/suimon/releases/download/v1.0.1/suimon_Linux_arm64.tar.gz"
-      sha256 "899619c8e4eee73fc2420ebc7ee0f523c7047902136f00f672e78a22365b4f18"
+      url "https://github.com/bartosian/suimon/releases/download/v1.0.0/suimon_Linux_arm64.tar.gz"
+      sha256 "c0e66c4b48a90d2fadab3e9e6961f97a836ea72a949ea3017c838b76573d555f"
 
       def install
         bin.install "suimon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.0.1/suimon_Linux_x86_64.tar.gz"
-      sha256 "55084c329ee58065b333f22438ce1f4fd861bb8a2519c47ac598ab6a0b24387b"
+      url "https://github.com/bartosian/suimon/releases/download/v1.0.0/suimon_Linux_x86_64.tar.gz"
+      sha256 "03a7bbc388843ebb0bf7de6050662eee149e83eb39713436bfe8583f4ab8dbb0"
 
       def install
         bin.install "suimon"
