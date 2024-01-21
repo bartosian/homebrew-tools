@@ -10,7 +10,7 @@ class Suimon < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Darwin_arm64.tar.gz"
-      sha256 "77850543ae6cfe15d9e279df8f743e620e3439adbe9e2293ecd51430e2a7ac07"
+      sha256 "f6787fab7b8adc0db9aac609694a186423209152708d2d5140f96bd5ae19f937"
 
       def install
         bin.install "suimon"
@@ -18,7 +18,7 @@ class Suimon < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Darwin_x86_64.tar.gz"
-      sha256 "23ffb8d548a98d3f5f79ddd0635753a9f9b6c9ac906a7344c1487a8722ec292d"
+      sha256 "b56f58af48e94d58a36f3ae8c357e6682db8d4ffb3d34ed7ec0132e21356cffc"
 
       def install
         bin.install "suimon"
@@ -29,7 +29,7 @@ class Suimon < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Linux_arm64.tar.gz"
-      sha256 "a64094291f487fc9ed1d996fd85b2b6305844ba333a80c818ad6d1384941adec"
+      sha256 "0988965f8a069368173e4b6a3113574ee8fb21ff725df5809d95a244e8b5f4f8"
 
       def install
         bin.install "suimon"
@@ -37,7 +37,7 @@ class Suimon < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Linux_x86_64.tar.gz"
-      sha256 "061091a7c08e9426847431601d804a8a856911718dde708b730eae7081089d25"
+      sha256 "16c19140e610c4b166df784f129505155369ddd9b64a5634e0adf5bb298318c9"
 
       def install
         bin.install "suimon"
