@@ -5,20 +5,20 @@
 class Suimon < Formula
   desc ""
   homepage "https://github.com/bartosian/homebrew-tools"
-  version "1.1.1"
+  version "1.2.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bartosian/suimon/releases/download/v1.1.1/suimon_Darwin_arm64.tar.gz"
-      sha256 "970bca0d418fa00e13587d74c58aa3a1811a0b380be3ebe0b8b8cd2888705e89"
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.1/suimon_Darwin_arm64.tar.gz"
+      sha256 "3fec473244b004677d65e79a398a4c4f4e02efb201cbada30340fdc61a73dac3"
 
       def install
         bin.install "suimon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.1.1/suimon_Darwin_x86_64.tar.gz"
-      sha256 "d591511134e67ded5db66e317181c88d8e254411e6c813428915ed77cf43c32a"
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.1/suimon_Darwin_x86_64.tar.gz"
+      sha256 "46a8e5478d71f91f12a9b56525b28004bd1c11c0e1255f0e2c2b164da16d4a04"
 
       def install
         bin.install "suimon"
@@ -28,16 +28,16 @@ class Suimon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bartosian/suimon/releases/download/v1.1.1/suimon_Linux_arm64.tar.gz"
-      sha256 "4457d60cf2fa2eb6408641273228ebc09d6fc720755e19a9c43eabecdff107ad"
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.1/suimon_Linux_arm64.tar.gz"
+      sha256 "6473641bd7b46273570544a19cd7d6ad15adfe430bde8058253bf0b1c3c2fc58"
 
       def install
         bin.install "suimon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.1.1/suimon_Linux_x86_64.tar.gz"
-      sha256 "2c39455f0916ddb7e325be9ddf2f681574114b0bb688c6f825115435c617ca08"
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.1/suimon_Linux_x86_64.tar.gz"
+      sha256 "cc1b7b718f2afafa41eca74cc30448d31a45d85af9d07fd862edb50e13e3b44e"
 
       def install
         bin.install "suimon"
