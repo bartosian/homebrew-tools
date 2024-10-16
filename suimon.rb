@@ -5,20 +5,20 @@
 class Suimon < Formula
   desc ""
   homepage "https://github.com/bartosian/homebrew-tools"
-  version "1.2.2"
+  version "1.2.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Darwin_arm64.tar.gz"
-      sha256 "f6787fab7b8adc0db9aac609694a186423209152708d2d5140f96bd5ae19f937"
+    on_intel do
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.3/suimon_Darwin_x86_64.tar.gz"
+      sha256 "76c7de7ebdaceeac51e27c2160068d232e5f84d8f6dd33882efa43d0d6f1e3e5"
 
       def install
         bin.install "suimon"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Darwin_x86_64.tar.gz"
-      sha256 "b56f58af48e94d58a36f3ae8c357e6682db8d4ffb3d34ed7ec0132e21356cffc"
+    on_arm do
+      url "https://github.com/bartosian/suimon/releases/download/v1.2.3/suimon_Darwin_arm64.tar.gz"
+      sha256 "8b181e9b828246a4fe46769d1789147a5225716363ed28fc11721f3cc3d53dec"
 
       def install
         bin.install "suimon"
@@ -27,20 +27,24 @@ class Suimon < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Linux_arm64.tar.gz"
-      sha256 "0988965f8a069368173e4b6a3113574ee8fb21ff725df5809d95a244e8b5f4f8"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bartosian/suimon/releases/download/v1.2.3/suimon_Linux_x86_64.tar.gz"
+        sha256 "e636206c37bb55606672656cc3249aa1bf046ef82a8172a4297d6ced79313086"
 
-      def install
-        bin.install "suimon"
+        def install
+          bin.install "suimon"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bartosian/suimon/releases/download/v1.2.2/suimon_Linux_x86_64.tar.gz"
-      sha256 "16c19140e610c4b166df784f129505155369ddd9b64a5634e0adf5bb298318c9"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bartosian/suimon/releases/download/v1.2.3/suimon_Linux_arm64.tar.gz"
+        sha256 "5a603cd2b210c1a4777ab9faa263b36a391628e855da721985f55a0bda2f1754"
 
-      def install
-        bin.install "suimon"
+        def install
+          bin.install "suimon"
+        end
       end
     end
   end
